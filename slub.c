@@ -10,7 +10,7 @@
  * CVE REFERENCES: CVE-2021-22555, CVE-2022-29582 (exploitation primitives)
  * AFFECTED: Linux kernel SLUB allocator (default since 2.6.23)
  *
- * Author: Alae eddine Samih
+ * Author: Alae eddine
  * Date: February 2026
  * License: MIT (Educational purposes only)
  *
