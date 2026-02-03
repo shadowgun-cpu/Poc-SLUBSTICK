@@ -94,29 +94,29 @@ sudo apt install linux-tools-common linux-tools-generic
 ### Build from Source
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/slubstick-research.git
-cd slubstick-research
+git clone https://github.com/shadowgun-cpu/Poc-SLUBSTICK
+cd Poc-SLUBSTICK
 
 # Compile with optimizations
-gcc -O2 -Wall -Wextra -o slubstick_poc slubstick_poc.c -lpthread -lrt
+gcc -O2 -Wall -Wextra -o slub slub.c -lpthread -lrt
 
 # Run with elevated privileges (recommended for real-time scheduling)
-sudo ./slubstick_poc
+sudo ./slub
 
 # Or run without sudo (slightly reduced timing accuracy)
-./slubstick_poc
+./slub
 ```
 
 ### Compilation Options
 ```bash
 # Debug build with symbols
-gcc -g -O0 -Wall -Wextra -o slubstick_poc slubstick_poc.c -lpthread -lrt
+gcc -g -O0 -Wall -Wextra -o slub slub.c -lpthread -lrt
 
 # Optimized build with additional warnings
-gcc -O3 -Wall -Wextra -Wpedantic -march=native -o slubstick_poc slubstick_poc.c -lpthread -lrt
+gcc -O3 -Wall -Wextra -Wpedantic -march=native -o slub slub.c -lpthread -lrt
 
 # Static build (portable)
-gcc -O2 -static -o slubstick_poc slubstick_poc.c -lpthread -lrt
+gcc -O2 -static -o slub slub.c -lpthread -lrt
 ```
 
 ---
@@ -126,7 +126,7 @@ gcc -O2 -static -o slubstick_poc slubstick_poc.c -lpthread -lrt
 ### Basic Execution
 ```bash
 # Run the complete analysis
-sudo ./slubstick_poc
+sudo ./slub
 ```
 
 ### Expected Output
